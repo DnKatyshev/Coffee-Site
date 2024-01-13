@@ -127,7 +127,6 @@ section:not(:first-child){
 .layout{
 display: grid;
 grid-template: repeat(5, minmax(60px, 264px)) / repeat(7, minmax(60px, 215px));
-// grid-template: repeat(5, minmax(200px, 264px)) / repeat(7, 1fr);
 justify-content: center;
 margin-top: 30px;
     .layout__svg {
@@ -540,10 +539,15 @@ column-gap: 10px;
         }
     }
     .tabs__items {
+        position: relative;
+        width: 100%;
+        height: 470px;
         .tabs__item {
-            border: 4px solid #B09C7A;
-            height: 470px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
             filter: grayscale(10%);
+            border: 4px solid #B09C7A;
         }
         .tab__item--hidden {
             display: none;
