@@ -349,6 +349,10 @@ function init() {
         })
         map.geoObjects.add(mapMark)
     })
-    
+
+    // исправление ошибки с ресайзом
+    const observer = new ResizeObserver(entries => mapArray.forEach((map) => 
+        map.container.fitToViewport()));
+    tabItems.forEach((node) => observer.observe(node));
 }
 ymaps.ready(init);
